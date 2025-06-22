@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar bg-primary navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color: #fff;" href="#">Lodge Booking System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" style="color: #fff;" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" style="color: #fff;" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"style="color: #fff;" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>-->
+            <button class="btn btn-prmary" style="color: #fff;" type="submit">Book</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+    <div class="container>">
+        <img src="src/filios.jpg" class="img-fluid" style="max-width:100%; height: 640px; width: 100%; overflow: hidden;" alt="a room">
+        <div class="text-block position-relative" style="margin:0px; right: 20px;">
+            <div class="text-center">
+                <h1 class="text-white">Welcome to Our Room Booking System</h1>
+                <button class="btn btn-primary mt-3" style="color: #fff;">Get Started</button>
+                <button class="btn btn-secondary mt-3" style="color: #fff;">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Room Booking System</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="roomName" class="form-label">Room Name</label>
+                        <input type="text" class="form-control" id="roomName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="timeSlot" class="form-label">Time Slot</label>
+                        <select class="form-select" id="timeSlot" required>
+                            <option value="">Select a time slot</option>
+                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                            <!-- Add more time slots as needed -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Book Room</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="message" class="mt-4"></div>
+
+        <h2 class="mt-5">Booked Rooms</h2>
+        <table class="table table-striped mt-3" style="width: 600px; padding:0 90px;">
+            <thead>
+                <tr>
+                    <th>Room Name</th>
+                    <th>Date</th>
+                    <th>Time Slot</th>
+                </tr>
+                <tr>
+                    <td>Room Name</td>
+                    <td>Date</td>
+                    <td>Time Slot</td>
+                </tr>
+                <tr>
+                    <td>Room Name</td>
+                    <td>Date</td>
+                    <td>Time Slot</td>
+                </tr>
+                <tr>
+                    <td>Room Name</td>
+                    <td>Date</td>
+                    <td>Time Slot</td>
+                </tr>
+                <tr>
+                    <td>Room Name</td>
+                    <td>Date</td>
+                    <td>Time Slot</td>
+                </tr>
+            </thead>
+            <tbody id="bookedRoomsList">
+                <!-- Booked rooms will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9
+</body>
+</html>
